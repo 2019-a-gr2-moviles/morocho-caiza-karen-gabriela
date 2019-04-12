@@ -1,75 +1,190 @@
-fun main (args: Array <String>){
-    // Comentarios
+fun main(args: Array<String>) {
 
-    //Variables
-    // Que es mutar?? cambiar??
+    /*
+    * Comentario
+    * */
 
+    // Variables
+
+    // QUE ES MUTAR?? CAMBIAR???
     // Mutables
-
-    var nombreI = "Camila"
-    nombreI = "Karen"
-
+    var nombre = "Camila"
+    nombre = "Karen"
     // Inmutables
-    /* No se puede cambiartodo lo que se pueda hacer inmotable es mejor
-     Mientras mas inmutable sea el codigo es mejor*/
-
-
-    val nombre = "Karen"
-    // nombre = "Veronica"
+    val nombreI = "Camila"
+    // nombreI = "Karen"
 
     // Tipos de Datos
 
-    val apellido: String ="Paez"
-    val edad: Int = 24
+    // val apellido = "Eguez"
+
+    val apellido = "Caza"
+    val edad: Int = 20
     val sueldo: Double = 1.21
     val casado: Boolean = false
     val profesor: Boolean = true
-    val hijos: Nothing? = null
+    val hijos = null
 
-    // Duck Typing ingiere el tipo de dato automaticamente
-    // Si parece un pato
+    // Duck Typing
+    // Si parace un pato
     // Si camina como pato
     // Si suena como pato
     // Si vuela como pato
     // PATO
 
-    // Condicional
+    // Condicionales
 
-    if (apellido == "Olmedo" || nombre == "Veronica"){
-        println( "Verdadero")
-    }else {
+    if (apellido == "Caza" || nombre == "Karen") {
+        println("Verdadero")
+    } else {
         println("Falso")
     }
 
-    val tieneNombreYApellido = if(apellido!=null && nombre!=null) "ok" else "no"
-    println (tieneNombreYApellido)
+    val tieneNombreYApellido = if (apellido != null && nombre != null) "ok" else "no"
+    println(tieneNombreYApellido)
+    estaJalado(1.0)
+    estaJalado(8.0)
+    estaJalado(0.0)
+    estaJalado(7.0)
+    estaJalado(10.0)
+    holaMundo("Adrian")
+    holaMundoAvanzado(2)
+    val total = sumarDosNumeros(1, 3)
+    println(total)
+
+    val arregloCumpleanos: Array<Int> = arrayOf(1, 2, 3, 4)
+
+    var arregloTodo: Array<Any> = arrayOf(1, "asd", 10.2, true)
+
+    arregloCumpleanos[0] = 5
+    arregloCumpleanos.set(0, 5)
+
+    arregloTodo = arrayOf(5, 2, 3, 4)
+
+    // val notas: ArrayList<Int> = arrayListOf<Int>(1, 2, 3, 4, 5, 6)
+
+    val notas = arrayListOf(1, 2, 3, 4, 5, 6)
 
 
-    estaJalado( 1.0)
-    estaJalado( 8.0)
-    estaJalado( 0.0)
-    estaJalado( 7.0)
-    estaJalado( 10.0)
+    // FOR EACH -> Itera el arreglo
+    notas.forEachIndexed { indice, nota ->
+        println("Indice: $indice")
+        println("Nota: $nota")
+    }
 
+
+    // MAP -> itera y modifica el arreglo
+    // Impares +1  Pares +2
+    val notasDos = notas.map { nota ->
+        val modulo = nota % 2
+        val esPar = 0
+        when (modulo) {
+            esPar -> {
+                nota + 1
+            }
+            else -> {
+                nota + 2
+            }
+        }
+    }
+
+    notasDos.forEach {
+        println("Notas 2: $it")
+    }
+
+    /*val respuestaFilter = notas.filter {
+        it < 5 && it >2
+    }
+
+    respuestaFilter.forEach{ println(it)}*/
+
+    val respuestaFilter = notas.filter {    //Filtrar el arreglo
+        it in 3..4
+    }
+        .map {   //Mutar o cambiar el arreglo
+            it * 2
+        }
+    respuestaFilter.forEach{ println(it)}
+
+    val novias = arrayListOf(1,2,2,3,4,5)
+    val respuestaNovia = novias.any{
+        it == 7
+    }
+    println(respuestaNovia)
+
+    val tazos = arrayListOf(0,1,2,3,4,5,6,7)
+    val respuestaTazos = tazos.all {
+        it>1
+    }
+    println(respuestaTazos)
+
+    val totalTazos = tazos.reduce{valorAcumulado, tazo->
+        valorAcumulado + tazo
+    }
+    println(totalTazos)
+
+
+    /*val respuestaFilter = notas.filter {    //Filtro para imprimir rangos
+        it in 3..5
+    }
+
+    respuestaFilter.forEach{ println(it)}*/
+
+
+    // val fecha = Date()
+    // fecha.time = 11231231
+    // fecha.year = 2000
+    // fecha = Date(1989,6,10)
+
+    // sumerDosNumeros(numUno:1, numDos:3)
+    // IMPORTANTE: numUno: y numDos:
+    // los pone el editor
+    // de texto.
 }
 
-// Funciones
+fun holaMundo(mensaje: String): Unit {
+    println("Mensaje: $mensaje.")
+}
 
-fun estaJalado (nota:Double){
-    when (nota){
-        0.0 -> {
-            println ("Dios mio que vago")
-        }
+fun holaMundoAvanzado(mensaje: Any): Unit {
+    println("Mensaje: $mensaje.")
+}
+
+fun sumarDosNumeros(numUno: Int, numDos: Int): Int {
+    return numUno + numDos
+}
+
+
+fun estaJalado(nota: Double): Double {
+    when (nota) {
         7.0 -> {
             println("Pasaste con las justas")
         }
         10.0 -> {
-            println("Genial :D Felicitaciones")
+            println(" Felicitaciones :)")
+        }
+        0.0 -> {
+            println("Que vago!")
         }
         else -> {
-            println ("Tu nota es : $nota")
-            // println ("Tu nota es : ${nota}")
+            println("Tu nota es: $nota")
+            // println("Tu nota es: ${nota}")
         }
-
     }
+    return nota
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
