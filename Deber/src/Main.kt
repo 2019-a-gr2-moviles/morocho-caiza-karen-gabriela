@@ -8,13 +8,18 @@ import javax.swing.JOptionPane
 var computador =Computador()
 val list = arrayListOf<Computador>()
 
+
+
 fun main(args: Array<String>) {
+
     while(true)
         if(validar(login())){
             home()
         }else{
             JOptionPane.showMessageDialog(null, "No se encontro usuario", "ERROR", JOptionPane.ERROR_MESSAGE)
         }
+
+
 }
 
 fun login(): User {
@@ -52,7 +57,7 @@ fun home() {
             ).toInt()
 
             when (op) {
-                1 -> {
+                1 -> {buscarComputador()
                 }
                 2 -> {editarCatálogo()
 
@@ -189,6 +194,8 @@ fun eliminarComputador(){
         }
         JOptionPane.showMessageDialog(null, "Computador eliminado")
     }
-
-
 }
+
+
+
+
