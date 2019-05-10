@@ -1,0 +1,5 @@
+AccerAspire,ComputadoraEscritorio,IntelCorei5,$605
+BlairElite,ComputadoraEscritorio,IntelCore2,$230
+HPProSmall,ComputadoraEscritorio,IntelPentiumDC,$240
+HPPavilion,AllInOne,IntelCorei7,$560
+HP3KZ89,AllInOne,IntelCeleronJ4005,$280
