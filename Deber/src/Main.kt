@@ -9,7 +9,6 @@ var computador =Computador()
 val list = arrayListOf<Computador>()
 
 
-
 fun main(args: Array<String>) {
 
     while(true)
