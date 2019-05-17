@@ -30,11 +30,13 @@ class MainActivity : AppCompatActivity() {
 
 
     fun irAActividadDos(){
-
         val intent = Intent(
             this,
             Actividad_Dos::class.java
         )
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        intent.putExtra("nombre", "Karen")
+        intent.putExtra("edad",23 )
         startActivity (intent)
     }
 
