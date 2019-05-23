@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
             this,
             Parcelable::class.java
         )
-        val karen = Usuario("Karen",29, Date(),12.12)
+        val karen = Usuario("Karen",23, Date(),12.12)
         intentExplicito.putExtra("usuario", karen)
         startActivity(intentExplicito)
     }
