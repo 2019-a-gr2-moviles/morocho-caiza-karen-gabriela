@@ -19,13 +19,13 @@ class Parcelable : AppCompatActivity() {
 
         val karen:Usuario? = this.intent.getParcelableExtra<Usuario>("usuario")
         Log.i("parcelable", "Nombre ${karen?.nombre}")
-        Log.i("parcelable", "Nombre ${karen?.edad}")
-        Log.i("parcelable", "Nombre ${karen?.fechaNacimiento.toString()}")
-        Log.i("parcelable", "Nombre ${karen?.sueldo}")
+        Log.i("parcelable", "Edad ${karen?.edad}")
+        Log.i("parcelable", "Fecha Nacimiento ${karen?.fechaNacimiento.toString()}")
+        Log.i("parcelable", "Salario ${karen?.sueldo}")
 
         val cachetes:Mascota? = this.intent.getParcelableExtra<Mascota>("mascota")
-        Log.i("parcelable", "Nombre ${cachetes?.nombre}")
-        Log.i("parcelable", "Nombre ${cachetes?.duenio?.nombre}")
+        Log.i("parcelable", "Nombre mascota ${cachetes?.nombre}")
+        Log.i("parcelable", "Nombre duenio ${cachetes?.duenio?.nombre}")
 
     }
 

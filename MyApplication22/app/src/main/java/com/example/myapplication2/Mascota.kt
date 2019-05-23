@@ -3,6 +3,7 @@ package com.example.myapplication2
 import android.os.Parcelable
 import android.os.Parcel
 
+
 class Mascota (val nombre:String,
                val duenio:Usuario):Parcelable{
     constructor(parcel: Parcel) : this(
