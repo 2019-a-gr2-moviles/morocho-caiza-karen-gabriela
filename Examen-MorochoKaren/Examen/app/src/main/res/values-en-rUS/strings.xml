@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_Name">Exam</string>
+    <string name="btnEntrar">Login</string>
+    <string name="txtNombre">Enter Name</string>
+    <string name="btnEquipo">Team</string>
+    <string name="btnCrearEquipo">Create Team</string>
+    <string name="txtNombreEqueip">Name</string>
+    <string name="txtNombreLiga">League</string>
+    <string name="txtNombreFechaCreacio">Creation Date</string>
+    <string name="txtNumeroCopas">Cups International</string>
+    <string name="chkCampeonActual">Current Champion</string>
+    <string name="btnAceptar">Accept</string>
+    <string name="btnCancelar">Cancel</string>
+    <string name="btnEliminar">Delete</string>
+    <string name="btnActualizar">Update</string>
+    <string name="btnCrearJug">Crete Player</string>
+    <string name="btnGestionarJug">Manage Player</string>
+    <string name="btnMenu">Menu</string>
+    <string name="txtNumeroCamiseta">Shirt Number</string>
+    <string name="txtNombreCamiseta">Shirt Name</string>
+    <string name="txtNombreJugador">Name Player</string>
+    <string name="txtPoderEspecial">Especial Power</string>
+    <string name="txtFenchaIngreso">Admision Date</string>
+    <string name="txtGoles">Goals</string>
+    <string name="btnGuardar">Save</string>
+    <string name="btnEliminarJugador">Delete Player</string>
+    <string name="btnActualizarJugador">Update Player</string>
+    <string name="msg">Create Success</string>
+    <string name="msgEliminar">Delete Success</string>
+    <string name="msgActualizar">Update Success</string>
+    <string name="nombreEquipo">Nombres de Equipos</string>
+    <string name="nombreJugador">Teams Name</string>
+</resources>

@@ -18,6 +18,10 @@ class MainActivity : AppCompatActivity() {
         btn_adapter.setOnClickListener {
             irAListView()
         }
+
+        btn_recycler_view.setOnClickListener {
+            irArecyclerView()
+        }
     }
 
     fun irAParcelable(){
@@ -37,6 +41,14 @@ class MainActivity : AppCompatActivity() {
         startActivity(intentExplicito)
     }
 
+
+    fun irArecyclerView(){
+        val intentExplicito = Intent(
+                this,
+                ReciclerViewActivity::class.java
+        )
+        startActivity(intentExplicito)
+    }
 
     fun irAListView(){
         val intentExplicito = Intent(
