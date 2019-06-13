@@ -33,12 +33,22 @@
             android:layout_marginStart="36dp" app:layout_constraintVertical_bias="0.0"/>
 
     <Button
-        android:id="@+id/btn_recycler_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Recycler View"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_parcelable"
-        app:layout_constraintTop_toTopOf="@+id/btn_parcelable"
-        tools:layout_editor_absoluteX="11dp" />
+            android:id="@+id/btn_recyclerview"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_parcelable"
+            app:layout_constraintTop_toTopOf="@+id/btn_parcelable"
+            app:layout_constraintEnd_toStartOf="@+id/btn_parcelable" android:layout_marginEnd="44dp"
+            android:layout_marginRight="44dp" app:layout_constraintVertical_bias="0.0" android:text="Recycler"/>
+    <Button
+            android:text="RESPUESTA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_intent_respuesta" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/btn_parcelable" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
 </android.support.constraint.ConstraintLayout>
