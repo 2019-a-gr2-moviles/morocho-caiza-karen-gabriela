@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_messenger"
+                android:orientation="vertical">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/img_profile_image"
+            android:layout_width="75dp"
+            android:layout_height="77dp"
+            android:src="@drawable/foto_alicia"
+            app:civ_border_width="0dp"
+            app:civ_border_color="#00BCD4"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/txt_nombre_usuario_chat"
+            android:layout_toEndOf="@+id/img_profile_image"
+            android:layout_toRightOf="@+id/img_profile_image" android:layout_marginLeft="38dp"
+            android:layout_marginStart="38dp"
+            android:layout_alignParentEnd="true" android:layout_alignParentRight="true"
+            android:layout_marginRight="142dp" android:layout_marginEnd="142dp" android:layout_marginTop="26dp"
+            android:layout_alignParentTop="true"/>
+
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/txt_hora"
+            android:layout_toEndOf="@+id/img_profile_image"
+            android:layout_toRightOf="@+id/img_profile_image" android:layout_marginLeft="179dp"
+            android:layout_marginStart="179dp" android:layout_marginTop="25dp" android:layout_alignParentTop="true"/>
+</RelativeLayout>
