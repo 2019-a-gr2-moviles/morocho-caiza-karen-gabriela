@@ -14,7 +14,7 @@ class ChatActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chat)
 
-        val mensaje:Mensaje?= this.intent.getParcelableExtra<Mensaje>("mensaje")
+        val mensaje:Mensajeria?= this.intent.getParcelableExtra<Mensajeria>("mensaje")
         Log.i("mensaje", "Mensajee ${mensaje?.autor}")
         llenarDatos(mensaje!!)
 
@@ -23,15 +23,15 @@ class ChatActivity : AppCompatActivity() {
 
 
 
-        listachat.add(Chat("Tareas: Realizar 10 sumas y 10 restas","Pruebas: Próximo Martes 25/06/2019 "))
-        listachat.add(Chat("Reunión: Viernes 28/06/2019 ","Recordatorio: Mañana deportiva - Último sábado del mes de julio"))
-        listachat.add(Chat("Clausura: Viernes 29 de Julio","Autrización: Salida al museo del agua próximo jueves"))
-        listachat.add(Chat("Este easdasdasdasdasd","este easdasdasdasdasdasdasdasd"))
-        listachat.add(Chat("Este easdasdasdasdasd","este easdasdasdasdasdasdasdasd"))
-        listachat.add(Chat("Este easdasdasdasdasd","este easdasdasdasdasdasdasdasd"))
-        listachat.add(Chat("Este easdasdasdasdasd","este easdasdasdasdasdasdasdasd"))
-        listachat.add(Chat("Este easdasdasdasdasd","este easdasdasdasdasdasdasdasd"))
-        listachat.add(Chat("Este easdasdasdasdasd","este easdasdasdasdasdasdasdasd"))
+        listachat.add(Chat("Tarea 1: Realizar 10 sumas entre centenas","Pruebas: Próximo Martes 25/06/2019 "))
+        listachat.add(Chat("Tarea 2: Escribir 10 restas para resolver en clase ","Recordatorio: Mañana deportiva - Último sábado del mes de julio"))
+        listachat.add(Chat("Tarea 3: Resolver 10 restas entre decenas","Autrización: Salida al museo del agua próximo jueves"))
+        listachat.add(Chat("Tarea 4: Página 10 del libro","Tarea 5: Resolver 10 restas entre decenas"))
+        listachat.add(Chat("Tarea 6: Consultar que es la multiplicación","Tarea 7: Resolver 5 Multiplicaciones"))
+        listachat.add(Chat("Tarea 8: Repasar las tablas","Tarea 3: Página 12 del libro"))
+
+
+
 
 
         iniciarRecylerView(listachat,this,rv_chats)
@@ -57,7 +57,7 @@ class ChatActivity : AppCompatActivity() {
     }
 
 
-    fun llenarDatos(mensaje:Mensaje){
+    fun llenarDatos(mensaje:Mensajeria){
 
 
         when(mensaje.id_usuario){
@@ -73,10 +73,8 @@ class ChatActivity : AppCompatActivity() {
             10 -> { img_profile_image.setImageResource(R.drawable.foto_susana) }
             else ->{img_profile_image.setImageResource(R.drawable.foto_teresa)}
             }
-        txt_mensaje.text = "Active 1h ago"
+        txt_mensaje.text = "MATEMATICA 2B"
         txt_nombre_usuario_chat.text = mensaje.autor
-
-
 
 
         }

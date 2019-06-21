@@ -10,7 +10,7 @@ import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
 
-class AdaptadorMensaje (private val listaMensajes:List<Mensaje>,
+class AdaptadorMensaje (private val listaMensajes:List<Mensajeria>,
                         private val contexto:MainActivity,
                         private val recyclerview:RecyclerView): RecyclerView.Adapter<AdaptadorMensaje.MyViewHolder>() {
 
@@ -34,12 +34,12 @@ class AdaptadorMensaje (private val listaMensajes:List<Mensaje>,
             val layout = view.findViewById(R.id.layout_messenger) as RelativeLayout
 
             layout.setOnClickListener {
-                val mensaje = Mensaje(txt_autor_mensaje.text.toString(),txt_hora.text.toString(),id_usuario)
+                val mensaje = Mensajeria(txt_autor_mensaje.text.toString(),txt_hora.text.toString(),id_usuario)
                 irAChatActivity(mensaje)
                 Log.i("layput","Layout presionado con el id ${id_usuario}")  }
 
         }
-        fun irAChatActivity(mensaje:Mensaje){
+        fun irAChatActivity(mensaje:Mensajeria){
 
             contexto.irAChatAcivity(mensaje)
         }
@@ -80,7 +80,7 @@ class AdaptadorMensaje (private val listaMensajes:List<Mensaje>,
                 myViewHolder.imagen_usuario.setImageResource(R.drawable.foto_ana)
             }
             3 -> {
-                myViewHolder.imagen_usuario.setImageResource(R.drawable.foto_enrique)
+                myViewHolder.imagen_usuario.setImageResource(R.drawable.foto_teresa)
             }
             4 -> {
                 myViewHolder.imagen_usuario.setImageResource(R.drawable.foto_elvira)

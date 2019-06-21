@@ -7,23 +7,24 @@
     <TextView
             android:text="TextView"
             android:textColor="#000000"
-            android:gravity="center"
-            android:layout_width="371dp"
-            android:layout_height="125dp"
-            android:layout_marginRight="160dp"
+            android:gravity="center|center_vertical"
+            android:layout_width="319dp"
+            android:layout_height="99dp"
+            android:layout_marginRight="20dp"
             android:id="@+id/text_a_chat"
             android:radius="10dp"
-            android:background="@color/colorAccent" android:layout_marginBottom="20dp"/>
+            android:background="@drawable/round" android:layout_marginBottom="20dp"
+            android:layout_marginLeft="10dp" android:layout_marginTop="2dp" android:editable="true"/>
     <TextView
-            android:layout_marginLeft="0dp"
+            android:layout_marginLeft="10dp"
 
-            android:gravity="center"
+            android:gravity="center|center_vertical"
             android:text="TextView"
             android:textColor="#FFFFFF"
-            android:layout_width="371dp"
-            android:layout_height="122dp"
+            android:layout_width="319dp"
+            android:layout_height="108dp"
             android:id="@+id/text_b_chat"
             android:radius="10dp"
-            android:background="@color/colorPrimaryDark"
-            android:layout_marginBottom="20dp"/>
+            android:background="@drawable/round1"
+            android:layout_marginBottom="20dp" android:layout_marginRight="20dp"/>
 </LinearLayout>
