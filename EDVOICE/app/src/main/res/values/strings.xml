@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">EDVOICE</string>
+    <string name="app_name" ><center>EDVOICE</center></string>
+
 </resources>

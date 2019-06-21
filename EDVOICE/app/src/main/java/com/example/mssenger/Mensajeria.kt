@@ -3,7 +3,7 @@ package com.example.mssenger
 import android.os.Parcel
 import android.os.Parcelable
 
-class Mensaje(var autor: String, var hora: String, var id_usuario: Int ): Parcelable {
+class Mensajeria(var autor: String, var hora: String, var id_usuario: Int ): Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readString(),
         parcel.readString(),
@@ -21,12 +21,12 @@ class Mensaje(var autor: String, var hora: String, var id_usuario: Int ): Parcel
         return 0
     }
 
-    companion object CREATOR : Parcelable.Creator<Mensaje> {
-        override fun createFromParcel(parcel: Parcel): Mensaje {
-            return Mensaje(parcel)
+    companion object CREATOR : Parcelable.Creator<Mensajeria> {
+        override fun createFromParcel(parcel: Parcel): Mensajeria {
+            return Mensajeria(parcel)
         }
 
-        override fun newArray(size: Int): Array<Mensaje?> {
+        override fun newArray(size: Int): Array<Mensajeria?> {
             return arrayOfNulls(size)
         }
     }

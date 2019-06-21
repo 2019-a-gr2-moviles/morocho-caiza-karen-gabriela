@@ -7,36 +7,38 @@ import android.support.v7.widget.DefaultItemAnimator
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_principal.*
+
+
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        var listaMensajes = arrayListOf<Mensaje>()
+        var listaMensajes = arrayListOf<Mensajeria>()
 
-        listaMensajes.add(Mensaje("Alicia Jaramillo","8:30 am",1))
-        listaMensajes.add(Mensaje("Ana Salazar","8:30 am",2))
-        listaMensajes.add(Mensaje("Elvira Muñoz","8:30 am",9))
-        listaMensajes.add(Mensaje("Ivonne Caiza","8:30 am",4))
-        listaMensajes.add(Mensaje("Geraldine Zavala","8:31 am",5))
-        listaMensajes.add(Mensaje("Luz Álvarez","9:30 am",6))
-        listaMensajes.add(Mensaje("Margarita Torres","8:30 am",7))
-        listaMensajes.add(Mensaje("Richard Bustamante","10:30 am",8))
-        listaMensajes.add(Mensaje("Enrique Pérez","8:30 am",3))
-        listaMensajes.add(Mensaje("Susana Molina","10:30 am",10))
-        listaMensajes.add(Mensaje("Teresa Pinos","10:30 am",11))
+        listaMensajes.add(Mensajeria("Alicia Jaramillo","8:30 am",1))
+        listaMensajes.add(Mensajeria("Ana Salazar","8:30 am",2))
+        listaMensajes.add(Mensajeria("Elvira Muñoz","8:30 am",9))
+        listaMensajes.add(Mensajeria("Ivonne Caiza","8:30 am",4))
+        listaMensajes.add(Mensajeria("Geraldine Zavala","8:31 am",5))
+        listaMensajes.add(Mensajeria("Luz Álvarez","9:30 am",6))
+        listaMensajes.add(Mensajeria("Margarita Torres","8:30 am",7))
+        listaMensajes.add(Mensajeria("Richard Bustamante","10:30 am",8))
+        listaMensajes.add(Mensajeria("Enrique Pérez","8:30 am",3))
+        listaMensajes.add(Mensajeria("Susana Molina","10:30 am",10))
+        listaMensajes.add(Mensajeria("Teresa Pinos","10:30 am",11))
 
         iniciarRecylerView(listaMensajes,this,recycler_view_mensajes)
 
-    btn_ingresar.setOnClickListener {
-        irAMainActivity()
-    }
+
+
     }
 
+
+
     fun iniciarRecylerView(
-        lista: List<Mensaje>,
+        lista: List<Mensajeria>,
         actividad: MainActivity,
         recycler_view: RecyclerView
     ) {
@@ -53,7 +55,7 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    fun irAChatAcivity(mensaje: Mensaje){
+    fun irAChatAcivity(mensaje: Mensajeria){
         val intentExplicito = Intent(
             this,
             ChatActivity::class.java
@@ -66,11 +68,5 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun irAMainActivity(){
-        val intentExplicito = Intent(
-            this, MainActivity::class.java
-        )
-        startActivity(intentExplicito)
-    }
 
 }
