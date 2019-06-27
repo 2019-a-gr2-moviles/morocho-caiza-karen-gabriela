@@ -3,11 +3,9 @@ package com.example.myapplication
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.DefaultItemAnimator
-import android.support.v7.widget.LinearLayoutCompat
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_recicler_view.*
-import java.util.ArrayList
 
 class ReciclerViewActivity : AppCompatActivity() {
 
@@ -15,22 +13,13 @@ class ReciclerViewActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recicler_view)
 
-
         val lista = arrayListOf<Persona>()
-        //var recycler_view = rv_personas
-        //val actividad = this
+        // val recycler_view = rv_personas
+        // val actividad = this
 
-        lista.add(Persona( "Karen", "1724449887"))
-        lista.add(Persona( "Camila", "1710652171"))
-        lista.add(Persona( "Fabricio", "0258496321"))
-
-        //val adaptadorPersona = AdaptadorPersona(lista,actividad,recycler_view)
-
-        //rv_personas.adapter = adaptadorPersona
-        //rv_personas.itemAnimator = DefaultItemAnimator()
-       // rv_personas.layoutManager = LinearLayoutManager(this)
-
-        //adaptadorPersona.notifyDataSetChanged()
+        lista.add(Persona("Adrian", "171819134"))
+        lista.add(Persona("Vicente", "0192839495"))
+        lista.add(Persona("Carolina", "2003938182"))
 
         iniciarRecylerView(lista, this, rv_personas)
 
@@ -46,13 +35,14 @@ class ReciclerViewActivity : AppCompatActivity() {
             actividad,
             recycler_view
         )
-        recycler_view.adapter = adaptadorPersona //nuevo adaptador para la nueva lista
+        recycler_view.adapter = adaptadorPersona
         recycler_view.itemAnimator = DefaultItemAnimator()
         recycler_view.layoutManager = LinearLayoutManager(actividad)
 
-        adaptadorPersona.notifyDataSetChanged()}
+        adaptadorPersona.notifyDataSetChanged()
+    }
 
-    fun cambiarNombreTextView(texto:String){
-        txt_titulo_rv.text = texto
+    fun cambiarNombreTextView(texto: String) {
+        txv_titulo_rv.text = texto
     }
 }
