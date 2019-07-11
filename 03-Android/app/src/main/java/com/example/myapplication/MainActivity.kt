@@ -93,7 +93,7 @@ class MainActivity : AppCompatActivity() {
             this,
             Parcelable::class.java
         )
-        val adrian = Usuario("Adrian",
+        val adrian = Usuario("Karen",
             29,
             Date(),
             12.12)

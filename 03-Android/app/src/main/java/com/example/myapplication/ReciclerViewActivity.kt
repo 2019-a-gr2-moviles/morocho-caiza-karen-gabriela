@@ -17,9 +17,9 @@ class ReciclerViewActivity : AppCompatActivity() {
         // val recycler_view = rv_personas
         // val actividad = this
 
-        lista.add(Persona("Adrian", "171819134"))
-        lista.add(Persona("Vicente", "0192839495"))
-        lista.add(Persona("Carolina", "2003938182"))
+        lista.add(Persona("Karen", "171819134"))
+        lista.add(Persona("Gabriela", "0192839495"))
+        lista.add(Persona("Estefanía", "2003938182"))
 
         iniciarRecylerView(lista, this, rv_personas)
 
@@ -36,7 +36,7 @@ class ReciclerViewActivity : AppCompatActivity() {
             recycler_view
         )
         recycler_view.adapter = adaptadorPersona
-        recycler_view.itemAnimator = androidx.recyclerview.widget.DefaultItemAnimator()
+        recycler_view.itemAnimator = androidx.recyclerview.widget.DefaultItemAnimator() as RecyclerView.ItemAnimator?
         recycler_view.layoutManager = androidx.recyclerview.widget.LinearLayoutManager(actividad)
 
         adaptadorPersona.notifyDataSetChanged()

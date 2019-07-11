@@ -74,7 +74,7 @@ class ConexionHttpActivity : AppCompatActivity() {
             Log.i("http", "${e.message}")
             Log.i(
                 "http",
-                "Error instanciando la empresa"
+                "Error al instanciar la empresa"
             )
         }
 
@@ -96,7 +96,7 @@ class ConexionHttpActivity : AppCompatActivity() {
                         val empresaParseada = Klaxon()
                             .parse<Empresa>(data)
                         if (empresaParseada != null) {
-                            Log.i("http", " iiiiiiiiiiiiiiiiiiii ")
+                            Log.i("http", " iiiiiiiiiiiiiiiii!! ")
                             Log.i("http", "${empresaParseada.nombre} ")
                             Log.i("http", "${empresaParseada.id} ")
                         }
@@ -109,7 +109,7 @@ class ConexionHttpActivity : AppCompatActivity() {
         val parametrosCrearEmpresa = listOf(
             "nombre" to "Manticore Labs 2", // Este sirve
             "apellidos" to "Morocho Caiza", // Colados
-            "sueldo" to 12.20, // Colados
+            "sueldo" to 15.02, // Colados
             "casado" to false, // Colados
             "hijos" to null // Colados
         )

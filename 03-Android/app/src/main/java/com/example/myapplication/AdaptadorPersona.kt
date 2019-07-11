@@ -43,9 +43,9 @@ class AdaptadorPersona(
 
                 val nuevasPersonas = arrayListOf<Persona>()
 
-                nuevasPersonas.add(Persona("Felipe", "1091231239"))
-                nuevasPersonas.add(Persona("Rafael", "0192929273"))
-                nuevasPersonas.add(Persona("Nydia", "18293041822"))
+                nuevasPersonas.add(Persona("Camila", "1094431239"))
+                nuevasPersonas.add(Persona("Jeremy", "0192915173"))
+                nuevasPersonas.add(Persona("Belén", "54693041822"))
 
                 contexto.iniciarRecylerView(nuevasPersonas, contexto, recyclerView)
 
