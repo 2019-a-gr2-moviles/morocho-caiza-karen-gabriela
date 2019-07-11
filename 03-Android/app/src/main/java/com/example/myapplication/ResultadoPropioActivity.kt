@@ -17,8 +17,8 @@ class ResultadoPropioActivity : AppCompatActivity() {
     }
 
     fun devolverRespuesta() {
-        val nombre = "Adrian"
-        val edad = 30
+        val nombre = "Karen"
+        val edad = 23
 
         val intentRespuesta = Intent()
 

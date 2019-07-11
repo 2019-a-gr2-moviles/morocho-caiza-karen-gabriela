@@ -16,9 +16,9 @@ class Main2Activity : AppCompatActivity() {
 
         fab.setOnClickListener { view: View ->
             Snackbar
-                .make(view, "Gracias por crear un nuevo usuario", Snackbar.LENGTH_LONG)
+                .make(view, "Gracias por crear un usuario nuevo", Snackbar.LENGTH_LONG)
                 .setAction("Action", null)
-            mostrarSnack(view, "Gracias por crear un nuevo usuario")
+            mostrarSnack(view, "Gracias por crear un usuario nuevo")
         }
     }
 
