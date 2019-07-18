@@ -36,8 +36,29 @@ class MainActivity : AppCompatActivity() {
         btn_mapa.setOnClickListener {
             irAMapa()
         }
+        btn_ciclovida.setOnClickListener {
+            irACicloVida()
+        }
+        btn_fragmento.setOnClickListener {
+            irAFragmento()
+        }
     }
 
+    fun irAFragmento(){
+        val intentExplicito = Intent(
+            this,
+            FragmentosActivity::class.java
+        )
+        startActivity(intentExplicito)
+    }
+
+    fun irACicloVida(){
+        val intentExplicito = Intent(
+            this,
+            CicloVidaActivity::class.java
+        )
+        startActivity(intentExplicito)
+    }
     fun irAMapa(){
         val intentExplicito = Intent(
             this,
