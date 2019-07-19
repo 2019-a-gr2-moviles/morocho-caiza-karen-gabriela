@@ -16,6 +16,9 @@ class FragmentosActivity : AppCompatActivity() {
         btn_segundo.setOnClickListener {
             abrirSegundoFragmento()
         }
+        btn_tercero.setOnClickListener {
+            abrirTercerFragmento ()
+        }
     }
 
     fun abrirPrimerFragmento(){
@@ -24,9 +27,13 @@ class FragmentosActivity : AppCompatActivity() {
         //2) Empezar la transaccción
         val transaccion = fragmentManager.beginTransaction()
         //3) Definir la instancia del fragmento
-        val primerFragment = Primero_Fragment()
+        val primeroFragment = Primero_Fragment()
         //4)Reemplazamos el fragmento
-        transaccion.replace(R.id.cly_fragmento, primerFragment) //sacar el número de identificación del cly usando R.i
+        val argumentos = Bundle();
+        argumentos.putInt("contador", 1)
+        primeroFragment.arguments = argumentos
+
+        transaccion.replace(R.id.cly_fragmento, primeroFragment) //sacar el número de identificación del cly usando R.i
         //5)Terminar la transaccion
         transaccion.commit()
     }
@@ -36,9 +43,26 @@ class FragmentosActivity : AppCompatActivity() {
         //2) Empezar la transaccción
         val transaccion = fragmentManager.beginTransaction()
         //3) Definir la instancia del fragmento
-        val primerFragment = Segundo_Fragment()
+        val segundoFragment = Segundo_Fragment()
         //4)Reemplazamos el fragmento
-        transaccion.replace(R.id.cly_fragmento, primerFragment) //sacar el número de identificación del cly usando R.i
+        transaccion.replace(R.id.cly_fragmento, segundoFragment) //sacar el número de identificación del cly usando R.i
+        //5)Terminar la transaccion
+        transaccion.commit()
+    }
+    fun abrirTercerFragmento(){
+        //1) Llamar a un Manager
+        val fragmentManager = supportFragmentManager
+        //2) Empezar la transaccción
+        val transaccion = fragmentManager.beginTransaction()
+        //3) Definir la instancia del fragmento
+        val tercerFragment = TercerFragment()
+        //4)Reemplazamos el fragmento
+
+        val argumentos = Bundle()
+        argumentos.putInt("contador", 1)
+        tercerFragment.arguments = argumentos
+
+        transaccion.replace(R.id.cly_fragmento, tercerFragment) //sacar el número de identificación del cly usando R.i
         //5)Terminar la transaccion
         transaccion.commit()
     }
